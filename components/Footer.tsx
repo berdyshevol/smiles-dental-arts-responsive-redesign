@@ -6,17 +6,20 @@ export default function Footer() {
   return (
     <footer className="relative mt-24 overflow-hidden bg-brand-deep text-mint">
       <div className="bg-grain relative">
-        {/* Accreditations strip */}
+        {/* Accreditations strip — original colour logos on white chips */}
         <div className="border-b border-white/10">
-          <div className="mx-auto grid max-w-7xl grid-cols-3 items-center gap-6 px-6 py-8 sm:grid-cols-6">
+          <div className="mx-auto grid max-w-7xl grid-cols-2 items-stretch gap-4 px-6 py-8 sm:grid-cols-3 lg:grid-cols-6">
             {accreditations.map((a) => (
-              <div key={a.alt} className="flex items-center justify-center">
+              <div
+                key={a.alt}
+                className="flex items-center justify-center rounded-xl bg-white px-4 py-3 shadow-sm transition hover:-translate-y-0.5"
+              >
                 <Image
                   src={a.src}
                   alt={a.alt}
-                  width={90}
-                  height={90}
-                  className="h-14 w-auto object-contain opacity-80 brightness-0 invert transition hover:opacity-100"
+                  width={130}
+                  height={70}
+                  className="h-12 w-auto object-contain"
                 />
               </div>
             ))}
