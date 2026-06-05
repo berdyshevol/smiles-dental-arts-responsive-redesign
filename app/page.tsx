@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import ContactForm from "@/components/ContactForm";
+import Wave from "@/components/Wave";
 import { services, site, testimonials, tiles } from "@/lib/site";
 
 export default function Home() {
@@ -56,8 +57,14 @@ export default function Home() {
 
           <Reveal delay={0.1} className="order-1 lg:order-2">
             <div className="relative">
-              <div className="absolute -inset-3 rounded-[28px] bg-gradient-to-tr from-mint to-gold-soft/50 blur-[2px]" />
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[24px] shadow-card sm:aspect-square">
+              <div
+                className="absolute -inset-3 bg-gradient-to-tr from-mint to-gold-soft/50 blur-[2px]"
+                style={{ borderRadius: "48% 48% 22px 22px" }}
+              />
+              <div
+                className="relative aspect-[4/5] overflow-hidden shadow-card sm:aspect-square"
+                style={{ borderRadius: "46% 46% 20px 20px" }}
+              >
                 <Image
                   src="/img/main-slider/banner.jpg"
                   alt="Smiling patient at Smiles Dental Arts"
@@ -66,7 +73,11 @@ export default function Home() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-[85%_center]"
                 />
+                {/* On-brand teal duotone tint */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-deep/35 via-brand/5 to-gold/5 mix-blend-multiply" />
               </div>
+              {/* Small gold accent dot */}
+              <div className="absolute -right-2 top-10 h-16 w-16 rounded-full bg-gold/30 blur-md" />
             </div>
           </Reveal>
         </div>
@@ -209,7 +220,9 @@ export default function Home() {
       </section>
 
       {/* ───────────────── Testimonials ───────────────── */}
-      <section className="relative overflow-hidden bg-brand-deep py-20 text-mint">
+      <section className="relative overflow-hidden bg-brand-deep py-28 text-mint md:py-36">
+        <Wave position="top" className="text-cream" />
+        <Wave position="bottom" className="text-cream" />
         <div
           className="absolute inset-0 opacity-15"
           style={{
@@ -218,7 +231,7 @@ export default function Home() {
             backgroundPosition: "center",
           }}
         />
-        <div className="relative mx-auto max-w-7xl px-6">
+        <div className="relative z-20 mx-auto max-w-7xl px-6">
           <Reveal className="text-center">
             <span className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">
               Testimonials
