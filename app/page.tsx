@@ -109,19 +109,8 @@ export default function Home() {
 
       {/* ───────────────── Welcome ───────────────── */}
       <section className="relative overflow-hidden bg-mint/60">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-[1.4fr_1fr]">
           <Reveal>
-            <div className="relative overflow-hidden rounded-[24px] shadow-card">
-              <Image
-                src="/img/services/prosthodontics.jpg"
-                alt="Inside Smiles Dental Arts"
-                width={760}
-                height={620}
-                className="h-full w-full object-cover"
-              />
-            </div>
-          </Reveal>
-          <Reveal delay={0.1}>
             <span className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">
               Welcome
             </span>
@@ -150,6 +139,18 @@ export default function Home() {
                 will prepare any necessary forms on your behalf and help you
                 maximize your dental insurance benefits.
               </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="mx-auto flex max-w-sm items-center justify-center rounded-[20px] bg-white p-8 shadow-card">
+              <Image
+                src="/img/services/invisalign_provider.png"
+                alt="Invisalign Provider"
+                width={420}
+                height={200}
+                className="h-auto w-full object-contain"
+              />
             </div>
           </Reveal>
         </div>
