@@ -57,27 +57,21 @@ export default function Home() {
 
           <Reveal delay={0.1} className="order-1 lg:order-2">
             <div className="relative">
-              <div
-                className="absolute -inset-3 bg-gradient-to-tr from-mint to-gold-soft/50 blur-[2px]"
-                style={{ borderRadius: "48% 48% 22px 22px" }}
-              />
-              <div
-                className="relative aspect-[4/5] overflow-hidden shadow-card sm:aspect-square"
-                style={{ borderRadius: "46% 46% 20px 20px" }}
-              >
+              <div className="absolute -inset-3 rounded-[30px] bg-gradient-to-tr from-mint to-gold-soft/50 blur-[2px]" />
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[24px] shadow-card sm:aspect-[5/6]">
                 <Image
                   src="/img/main-slider/banner.jpg"
                   alt="Smiling patient at Smiles Dental Arts"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover object-[85%_center]"
+                  className="object-cover object-[72%_center]"
                 />
-                {/* On-brand teal duotone tint */}
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-deep/35 via-brand/5 to-gold/5 mix-blend-multiply" />
+                {/* Subtle on-brand teal tint */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-deep/25 to-transparent mix-blend-multiply" />
               </div>
               {/* Small gold accent dot */}
-              <div className="absolute -right-2 top-10 h-16 w-16 rounded-full bg-gold/30 blur-md" />
+              <div className="absolute -right-3 top-8 h-16 w-16 rounded-full bg-gold/30 blur-md" />
             </div>
           </Reveal>
         </div>
