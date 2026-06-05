@@ -58,7 +58,7 @@ export default function Home() {
           <Reveal delay={0.1} className="order-1 lg:order-2">
             <div className="relative">
               <div className="absolute -inset-3 rounded-[30px] bg-gradient-to-tr from-mint to-gold-soft/50 blur-[2px]" />
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[24px] shadow-card sm:aspect-[5/6]">
+              <div className="relative aspect-square overflow-hidden rounded-[24px] shadow-card">
                 <Image
                   src="/img/main-slider/banner.jpg"
                   alt="Smiling patient at Smiles Dental Arts"
