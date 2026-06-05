@@ -198,11 +198,11 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.1} className="lg:order-1">
             <Image
-              src="/img/services/invisalign_and_dental_braces.jpg"
-              alt="Prosthodontics"
+              src="/img/services/prosthodontics.jpg"
+              alt="Prosthodontics — dental veneers, crowns, bridges and dentures"
               width={760}
               height={520}
-              className="w-full rounded-[24px] object-cover shadow-card"
+              className="aspect-[3/2] w-full rounded-[24px] object-cover shadow-card"
             />
           </Reveal>
         </div>
