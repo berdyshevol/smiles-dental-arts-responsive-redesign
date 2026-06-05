@@ -69,19 +69,15 @@ export default function Home() {
           <Reveal delay={0.1} className="order-1 lg:order-2">
             <div className="relative">
               <div className="absolute -inset-3 rounded-[28px] bg-gradient-to-tr from-mint to-gold-soft/50 blur-[2px]" />
-              <div className="relative aspect-[4/3] overflow-hidden rounded-[24px] shadow-card sm:aspect-[5/4]">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[24px] shadow-card sm:aspect-square">
                 <Image
                   src="/img/main-slider/banner.jpg"
-                  alt="Happy patient at Smiles Dental Arts"
+                  alt="Smiling patient at Smiles Dental Arts"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover object-[78%_center]"
+                  className="object-cover object-[85%_center]"
                 />
-              </div>
-              <div className="absolute -bottom-5 left-6 rounded-2xl bg-white px-5 py-4 shadow-card">
-                <p className="text-sm font-semibold text-brand-deep">Now accepting</p>
-                <p className="text-sm text-slate">new patients & most insurance</p>
               </div>
             </div>
           </Reveal>
