@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand — Smiles Dental Arts teal + gold */
+  --color-brand: #15a394;
+  --color-brand-dark: #0c7a6e;
+  --color-brand-deep: #0a5d54;
+  --color-mint: #eaf7f4;
+  --color-mint-200: #d2ece6;
+  --color-gold: #d8a531;
+  --color-gold-soft: #f3e2b8;
+
+  --color-ink: #16302c;
+  --color-slate: #51635f;
+  --color-line: #e3ede9;
+  --color-cream: #f7fbfa;
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+
+  --radius-card: 20px;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 18px 40px -24px rgba(10, 93, 84, 0.45);
+  --shadow-card: 0 24px 60px -32px rgba(10, 93, 84, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
+}
+
+/* CSS-driven entrance — runs independently of JS, so content is never left
+   blank by a stalled animation. Ends at full opacity. */
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: none; }
+}
+.reveal {
+  animation: revealUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { animation: none; }
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-floaty { animation: floaty 6s ease-in-out infinite; }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Decorative grain/noise atmosphere */
+.bg-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  background-image: radial-gradient(rgba(13, 122, 110, 0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.text-balance { text-wrap: balance; }
+
+::selection {
+  background: var(--color-brand);
+  color: white;
+}
+
+/* Focus visibility for accessibility */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--color-brand-dark);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
