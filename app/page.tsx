@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
-import { services, site, testimonials } from "@/lib/site";
+import ContactForm from "@/components/ContactForm";
+import { services, site, testimonials, tiles } from "@/lib/site";
 
 export default function Home() {
   return (
@@ -18,16 +19,21 @@ export default function Home() {
               </span>
             </Reveal>
             <Reveal delay={0.08}>
-              <h1 className="mt-6 text-balance text-4xl text-ink sm:text-5xl lg:text-[3.4rem]">
-                Quality dental care, delivered by an{" "}
-                <span className="text-brand">expert team</span> you can trust.
+              <h1 className="mt-6 text-balance text-4xl text-ink sm:text-5xl lg:text-[3.3rem]">
+                Experience quality dental care provided by an{" "}
+                <span className="text-brand">expert team</span>
               </h1>
             </Reveal>
             <Reveal delay={0.16}>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate">
-                We've built our office around the comfort and needs of our
-                patients — friendly staff, state-of-the-art technology, and a
-                dentist known for his warmth (and his sense of humour).
+                We have built our office around the comfort and needs of our
+                patients. All our staff members are friendly and help you with
+                all information from the time you contact our dental practice.
+                Our dentist is known for his sense of humour. We are equipped
+                with state-of-art technological equipment, which help us in
+                diagnosing a dental problem and curing the same. Our office is
+                constantly upgraded with the latest equipment available on the
+                market.
               </p>
             </Reveal>
             <Reveal delay={0.24}>
@@ -44,24 +50,6 @@ export default function Home() {
                 >
                   <span aria-hidden>📞</span> Click to Call
                 </a>
-              </div>
-            </Reveal>
-            <Reveal delay={0.32}>
-              <div className="mt-10 flex items-center gap-6 text-sm text-slate">
-                <div>
-                  <p className="font-display text-3xl text-brand-deep">20+</p>
-                  <p>Years of smiles</p>
-                </div>
-                <span className="h-10 w-px bg-line" />
-                <div>
-                  <p className="font-display text-3xl text-brand-deep">5.0★</p>
-                  <p>Patient rated</p>
-                </div>
-                <span className="h-10 w-px bg-line" />
-                <div>
-                  <p className="font-display text-3xl text-brand-deep">Hi-tech</p>
-                  <p>Modern equipment</p>
-                </div>
               </div>
             </Reveal>
           </div>
@@ -104,6 +92,7 @@ export default function Home() {
                     src={s.img}
                     alt={s.title}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover transition duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-deep/40 to-transparent" />
@@ -111,9 +100,6 @@ export default function Home() {
                 <div className="p-6">
                   <h3 className="text-xl text-brand-deep">{s.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate">{s.desc}</p>
-                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand transition group-hover:gap-2">
-                    Learn more →
-                  </span>
                 </div>
               </article>
             </Reveal>
@@ -142,49 +128,47 @@ export default function Home() {
             <h2 className="mt-3 text-3xl text-ink sm:text-4xl">
               Welcome to Smiles Dental Arts
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-slate">
-              Our objective is simple — to serve you and make every visit a
-              positive experience, building a lifelong relationship along the
-              way. Our philosophy is comfortable care, delivered through hi-tech,
-              skilled service with a friendly, courteous touch.
-            </p>
-            <p className="mt-4 leading-relaxed text-slate">
-              Our experienced team is happy to help with any insurance questions
-              and will work to maximize your benefits — so you can focus on your
-              smile, not the paperwork.
-            </p>
-            <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-              {[
-                "Patient comfort first",
-                "Latest dental technology",
-                "Most insurance accepted",
-                "Gentle, judgement-free care",
-              ].map((f) => (
-                <li key={f} className="flex items-center gap-3 text-slate">
-                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand text-xs text-white">
-                    ✓
-                  </span>
-                  {f}
-                </li>
-              ))}
-            </ul>
+            <div className="mt-5 space-y-4 leading-relaxed text-slate">
+              <p>
+                We welcome you to our dental website and look forward to building
+                a lifelong relationship with you as your family's dental care
+                provider. When you visit Smiles Dental Arts, you'll be treated
+                with the respect, friendliness, care and skill you expect and
+                deserve from your dental care provider.
+              </p>
+              <p>
+                Our objective as dental professionals is only to serve you and to
+                make your every visit to our dental office in Cudahy a positive
+                experience right from our first telephone conversation. Our
+                philosophy is focused on your comfortable care, provided through
+                our hi-tech, skilled service with a friendly, courteous touch.
+              </p>
+              <p>
+                Our warm and highly skilled dental team members are committed to
+                making your visit as comfortable and relaxing as possible.
+                Experienced in addressing dental insurance questions, our staff
+                will prepare any necessary forms on your behalf and help you
+                maximize your dental insurance benefits.
+              </p>
+            </div>
           </Reveal>
         </div>
       </section>
 
-      {/* ───────────────── Feature: Straight / Confident smile ───────────────── */}
-      <section id="smiles" className="mx-auto max-w-7xl space-y-20 px-6 py-20">
+      {/* ───────────────── Straight / Confident smile ───────────────── */}
+      <section className="mx-auto max-w-7xl space-y-20 px-6 py-20">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
             <span className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">
-              Orthodontics
+              Orthodontic Treatments
             </span>
-            <h2 className="mt-3 text-3xl text-ink sm:text-4xl">A straight smile</h2>
+            <h2 className="mt-3 text-3xl text-ink sm:text-4xl">Straight Smile</h2>
             <p className="mt-5 text-lg leading-relaxed text-slate">
-              A beautiful smile is the most valuable thing a person can wear,
-              anywhere, anytime. When teeth are properly aligned, you'll never
-              have a reason to hold your smile back. From Invisalign to braces,
-              we'll guide you to the confident smile you deserve.
+              A beautiful smile is the most valuable thing a person can wear
+              anywhere, anytime. The beauty of a smile blooms to its fullest when
+              the teeth are properly aligned. People with improperly aligned
+              teeth often cover their mouth when laughing or smiling, or simply
+              avoid smiling all together.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -203,11 +187,12 @@ export default function Home() {
             <span className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">
               Prosthodontics
             </span>
-            <h2 className="mt-3 text-3xl text-ink sm:text-4xl">A confident smile</h2>
+            <h2 className="mt-3 text-3xl text-ink sm:text-4xl">Confident Smile</h2>
             <p className="mt-5 text-lg leading-relaxed text-slate">
-              Whether you need to replace a single tooth or restore a full smile,
-              we offer dental veneers, crowns, bridges, partials and dentures —
-              custom-crafted to look and feel completely natural.
+              Whether you need to replace one tooth or all of them, we can quickly
+              give you the confident smile of your dream. Some of our
+              prosthodontist treatments include Dental Veneers, Dental Crowns,
+              Dental Bridges, Partials, and Dentures.
             </p>
           </Reveal>
           <Reveal delay={0.1} className="lg:order-1">
@@ -259,34 +244,55 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ───────────────── CTA band ───────────────── */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <Reveal>
-          <div className="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-brand to-brand-deep px-8 py-14 text-center shadow-card md:px-16">
-            <div className="pointer-events-none absolute -right-10 -top-10 h-48 w-48 rounded-full bg-gold/20 blur-2xl" />
-            <h2 className="text-balance text-3xl text-white sm:text-4xl">
-              Ready for your best smile yet?
+      {/* ───────────────── Office / Offers / Beautiful Smiles ───────────────── */}
+      <section id="beautiful-smiles" className="mx-auto max-w-7xl px-6 py-20">
+        <div className="grid gap-6 md:grid-cols-3">
+          {tiles.map((t, i) => (
+            <Reveal key={t.title} delay={i * 0.08}>
+              <article className="flex h-full flex-col rounded-card border border-line bg-white p-8 shadow-soft transition hover:-translate-y-1.5 hover:shadow-card">
+                <h3 className="text-2xl text-brand-deep">{t.title}</h3>
+                <p className="mt-3 flex-1 leading-relaxed text-slate">{t.desc}</p>
+                <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand">
+                  Read more →
+                </span>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* ───────────────── Get in Touch ───────────────── */}
+      <section id="contact" className="mx-auto max-w-7xl scroll-mt-28 px-6 pb-24">
+        <div className="grid gap-12 rounded-[28px] border border-line bg-cream p-8 shadow-soft md:grid-cols-2 md:p-12">
+          <Reveal>
+            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+              Get in Touch
+            </span>
+            <h2 className="mt-3 text-3xl text-ink sm:text-4xl">
+              Request an appointment
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-mint/85">
-              New patients are always welcome. Book a visit today and experience
-              dental care built around your comfort.
+            <p className="mt-4 leading-relaxed text-slate">
+              Call us at{" "}
+              <a href={site.phoneHref} className="font-semibold text-brand-dark">
+                {site.phone}
+              </a>{" "}
+              or send a message and our team will get back to you. New patients
+              are always welcome.
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <a
-                href={site.phoneHref}
-                className="rounded-pill bg-gold px-8 py-3.5 font-semibold text-brand-deep transition hover:brightness-105"
-              >
-                Call {site.phone}
-              </a>
-              <a
-                href="#contact"
-                className="rounded-pill border border-white/40 px-8 py-3.5 font-semibold text-white transition hover:bg-white/10"
-              >
-                Request an Appointment
-              </a>
+            <div className="mt-6 space-y-2 text-sm text-slate">
+              <p>📍 {site.address.line}, {site.address.city}</p>
+              {site.hours.map((h) => (
+                <p key={h.day} className="flex justify-between border-b border-line pb-1">
+                  <span>{h.day}</span>
+                  <span className="font-medium text-ink">{h.time}</span>
+                </p>
+              ))}
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <ContactForm />
+          </Reveal>
+        </div>
       </section>
     </>
   );

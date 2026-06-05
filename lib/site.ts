@@ -18,41 +18,61 @@ export const site = {
     { day: "Monday", time: "10:00am – 5:00pm" },
     { day: "Tuesday", time: "9:00am – 4:00pm" },
     { day: "Wednesday", time: "9:00am – 4:00pm" },
-    { day: "Thursday", time: "By appointment" },
+    { day: "Thursday", time: "By appointment only" },
     { day: "Friday", time: "9:00am – 3:00pm" },
-    { day: "Saturday", time: "By appointment" },
+    { day: "Saturday", time: "By appointment only" },
   ],
 };
 
+// Matches the live cudahydentist.net top navigation.
 export const nav = [
   { label: "Home", href: "/" },
-  { label: "Meet the Doctor", href: "/meet-the-doctor" },
+  { label: "About Us", href: "/meet-the-doctor" },
   { label: "Office Tour", href: "/office-tour" },
   { label: "Services", href: "/#services" },
-  { label: "Smiles", href: "/#smiles" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Beautiful Smiles", href: "/#beautiful-smiles" },
+  { label: "Forms", href: "/#contact" },
+  { label: "Blog", href: "/#contact" },
+  { label: "Contact Us", href: "/#contact" },
 ];
 
+// Service cards — copy verbatim from the live homepage.
 export const services = [
   {
     title: "Dental Implants",
     img: "/img/services/dental-implants.jpg",
-    desc: "Dental implants improve oral health by permanently replacing missing teeth.",
+    desc: "Dental implants improve oral health by replacing missing teeth.",
   },
   {
-    title: "Invisalign & Braces",
+    title: "Invisalign & Dental Braces",
     img: "/img/services/invisalign_and_dental_braces.jpg",
-    desc: "Invisalign and dental braces give you the beautiful, straight teeth you've always wanted.",
+    desc: "Consider Invisalign and Dental Braces to get the beautiful straight teeth you've always wanted.",
   },
   {
     title: "Cosmetic Dentist",
     img: "/img/services/emergency-dentist.jpg",
-    desc: "Transform your smile by restoring damaged teeth — for the confidence you deserve.",
+    desc: "Transform your smile by simply replacing and restoring your damaged teeth to improve your smile and confidence.",
   },
   {
     title: "Other Services",
     img: "/img/services/other-services.jpg",
-    desc: "Orthodontics, prosthodontics and a full range of advanced dental procedures.",
+    desc: "Have a look at some of our orthodontics, prosthodontics and other dental procedures.",
+  },
+];
+
+// The three lower tiles, verbatim.
+export const tiles = [
+  {
+    title: "Our Office",
+    desc: "We are equipped with latest technological devices. Patient comfort comes first at our fully furnished office.",
+  },
+  {
+    title: "Our Offers",
+    desc: "Our attractive coupons and offers can help you save money when availing our quality dental services.",
+  },
+  {
+    title: "Beautiful Smiles",
+    desc: "Our unparalleled quality of dental treatment can be seen in the results we have achieved for patients.",
   },
 ];
 
@@ -65,17 +85,18 @@ export const accreditations = [
   { src: "/img/Accreditations/aaipusa.png", alt: "American Academy of Implant Prosthodontics" },
 ];
 
+// Patient reviews — verbatim from the homepage testimonials section.
 export const testimonials = [
   {
     name: "Andrei P.",
-    text: "From the moment you walk in you feel welcome. Dr. Sanchez is approachable, gentle and genuinely cares. Best dental experience I've had.",
+    text: "This place is great, very welcoming friendly and they don't try to push you in and out. Had my teeth cleaned and tooth filled. I felt comfortable the whole time. This was first time here and Dr Sanchez was really easy to talk to. Give them a call and at the very least get your teeth checked out :) happy smiles everyone!",
   },
   {
     name: "Norbert I.",
-    text: "Spotlessly clean, friendly, and never judgmental. They explain everything clearly and make you feel completely at ease.",
+    text: "Had a great experience at this office. I hadn't had a cleaning for over a year and finally made it in to get it done. This was my first time at this office and I have to say I am very pleased. They made me feel welcome and didn't make me feel bad about not staying on top of my teeth. The place is super clean, friendly and knowledgable staff. If you looking for a great dentist that actually cares, see Doctor Sanchez and his staff. You wont be disappointed!",
   },
   {
-    name: "Patient · Huntington Park, CA",
-    text: "They go out of their way to keep you comfortable — they even have Netflix in the rooms. Highly recommend this practice.",
+    name: "Huntington Park, CA",
+    text: "Dr Sanchez went the extra step to make sure I was comfortable the whole time which is always appreciated. Everyone was so nice and they go out of there way to make you feel like family and makes you feel so at ease and relaxed. They also have Netflix playing in every room which is super awesome! I would definitely recommend coming here!",
   },
 ];

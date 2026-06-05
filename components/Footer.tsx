@@ -4,7 +4,7 @@ import { accreditations, nav, site } from "@/lib/site";
 
 export default function Footer() {
   return (
-    <footer id="contact" className="relative mt-24 overflow-hidden bg-brand-deep text-mint">
+    <footer className="relative mt-24 overflow-hidden bg-brand-deep text-mint">
       <div className="bg-grain relative">
         {/* Accreditations strip */}
         <div className="border-b border-white/10">
